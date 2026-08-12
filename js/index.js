@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentProgress = 0;
     let isLocked = true;
 
-    // 【追加】進行度の上限を 140 に設定（100〜140 が余白スクロールになります）
+    // 進行度の上限（100〜160 が余白スクロール）
     const MAX_PROGRESS = 160; 
 
     document.body.classList.add('no-scroll');
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('wheel', (e) => {
         if (!isFinished) return;
 
-        // ページ最上部で上にスクロールしたら再び固定モードへ
         if (!isLocked && window.scrollY <= 0 && e.deltaY < 0) {
             isLocked = true;
             document.body.classList.add('no-scroll');
@@ -45,11 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isLocked) {
             e.preventDefault();
 
-            // グラデ感度はそのまま(0.08)
             targetProgress += e.deltaY * 0.08;
             targetProgress = Math.max(0, Math.min(MAX_PROGRESS, targetProgress));
 
-            // MAX_PROGRESS（140）まで回しきった時にロック解除
             if (targetProgress >= MAX_PROGRESS && e.deltaY > 0) {
                 isLocked = false;
                 document.body.classList.remove('no-scroll');
@@ -92,12 +89,62 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: false });
 
     // ==========================================
+    // 画像（src）のクリック差し替え処理
+    // ==========================================
+    const blobs = document.querySelectorAll('.bg-blob');
+    blobs.forEach(blob => {
+        blob.style.cursor = 'pointer'; // ホバー時に指マークにする
+
+        blob.addEventListener('click', () => {
+            const currentSrc = blob.getAttribute('src');
+            const altSrc = blob.getAttribute('data-alt');
+
+            // data-alt にパスが指定されている場合のみ切り替える
+            if (altSrc) {
+                blob.setAttribute('src', altSrc);
+                blob.setAttribute('data-alt', currentSrc); // 再クリックで元に戻るよう保管
+            }
+        });
+    });
+
+    // ==========================================
+    // ★メニュー制御（スクロール表示・開閉）
+    // ==========================================
+    const menuBtn = document.getElementById('menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const menuClose = document.getElementById('menu-close');
+    const targetSection = document.querySelector('.main-content'); // 「早稲田祭開催決定！」などがあるセクション
+
+    if (menuBtn && menuOverlay && menuClose && targetSection) {
+        window.addEventListener('scroll', () => {
+            // 対象セクションの上端が、画面の中腹あたりまで来たらメニューボタンを表示
+            const rect = targetSection.getBoundingClientRect();
+            if (rect.top <= window.innerHeight * 0.8) {
+                menuBtn.classList.add('show');
+            } else {
+                menuBtn.classList.remove('show');
+                // スクロールで上部に戻った時にメニューが開いたままにならないよう閉じる
+                menuOverlay.classList.remove('active'); 
+            }
+        });
+
+        // メニューを開く
+        menuBtn.addEventListener('click', () => {
+            menuOverlay.classList.add('active');
+        });
+
+        // メニューを閉じる
+        menuClose.addEventListener('click', () => {
+            menuOverlay.classList.remove('active');
+        });
+    }
+
+    // ==========================================
     // 描画ループ
     // ==========================================
     function updateGradient() {
         currentProgress += (targetProgress - currentProgress) * 0.1;
 
-        // 画面描画（グラデ・図形）は100%で止めておく
         const renderProgress = Math.min(100, currentProgress);
 
         if (bgAnimation) {
