@@ -142,7 +142,7 @@ a {
 }
 .footer-all {
     position: relative;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 /* .foooter-back {
     position: absolute;
@@ -177,10 +177,133 @@ footer a {
     margin-top: 15px;
     align-items: center;
 }
+.menu-btn {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 100;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.2, 0, 0.2, 1);
+}
+.menu-icon {
+    width: 45px; 
+    height: auto;
+}
+
+.menu-text {
+    font-size: 16px;
+    color: #222222;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;       
+    width: 35vw;         
+    min-width: 320px;    
+    max-width: 450px;     
+   height: 65vh;      
+    min-height: 550px;   
+    z-index: 101;
+    background: transparent; 
+    transform-origin: top right;
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.4s ease; 
+    display: flex;
+    flex-direction: column;
+    padding: 80px 40px 40px 40px;
+    box-sizing: border-box;
+}
+
+.menu-bg-svg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    object-position: top right;    
+    z-index: -1; 
+    pointer-events: none; 
+}
+
+.menu-overlay.active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.menu-close {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FBFBFB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.close-icon-wrap {
+    position: relative;
+    width: 45px;
+    height: 45px;
+}
+
+.close-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 1.4px;
+    background-color: #FBFBFB;
+}
+
+.close-line:nth-child(1) { transform: rotate(45deg); }
+.close-line:nth-child(2) { transform: rotate(-45deg); }
+
+.close-text {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: 300;
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: auto 0;
+    text-align: center;
+    transform: translateX(30px);
+}
+
+.menu-list li {
+    margin-bottom: 35px;
+}
+
+.menu-list a {
+    color: #FBFBFB;
+    text-decoration: none;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    transition: opacity 0.3s ease;
+}
+
+.menu-list a:hover {
+    opacity: 0.7;
+}
 .sp {
     display: none;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
 .head-left img {
     overflow: visible !important;
     width: 90vw;
@@ -303,7 +426,7 @@ a {
     width: 100%;
     left: 0;
     top: 25%; /* お好みの高さに合わせてください */
-    padding-left: 50%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
+    padding-left: 60%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start; /* ★ ここを flex-start（左揃え）に戻す */
@@ -325,7 +448,7 @@ a {
     .sns-icons {
         position: absolute;
         left: 7%;
-        bottom: 0%;
+        bottom: -10%;
         margin-top: 0;
     }
 .sns-icons img {
@@ -338,7 +461,7 @@ a {
     display: none;
 }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .head-left img {
     overflow: visible !important;
     width: 90vw;
