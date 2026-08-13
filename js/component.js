@@ -1,16 +1,18 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // 要素を取得
-    const saiMenuBtn = document.querySelector('.sai-menu');
-    const slideMenu = document.getElementById('slideMenu');
-    const menuCloseBtn = document.getElementById('menuClose');
+const menuBtn = document.getElementById('menu-btn');
+const menuOverlay = document.getElementById('menu-overlay');
+const menuClose = document.getElementById('menu-close');
+// targetSection の取得も不要になります
 
-    // 開くボタン (.sai-menu) をクリックした時の処理
-    saiMenuBtn.addEventListener('click', () => {
-        slideMenu.classList.add('is-active');
+if (menuBtn && menuOverlay && menuClose) {
+    // ※ここにあった window.addEventListener('scroll', ...) の処理を丸ごと削除
+
+    // メニューを開く処理のみ残す
+    menuBtn.addEventListener('click', () => {
+        menuOverlay.classList.add('active');
     });
 
-    // 閉じるボタン (×マーク) をクリックした時の処理
-    menuCloseBtn.addEventListener('click', () => {
-        slideMenu.classList.remove('is-active');
+    // メニューを閉じる処理のみ残す
+    menuClose.addEventListener('click', () => {
+        menuOverlay.classList.remove('active');
     });
-});
+}
