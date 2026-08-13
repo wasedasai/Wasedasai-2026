@@ -716,6 +716,11 @@ section * {
         margin-bottom: 25px;
     }
 
+    .greeting-body p {
+    margin-bottom: 1.0rem;
+    color: #222222;
+    }
+
     .blob-top {
         width: 20%;
     }
@@ -960,7 +965,13 @@ section * {
     }
     .greeting-catch {
         font-size: 22px;
-        margin-bottom: 25px;
+        margin-bottom: 13px;
+        margin-top: 0px;
+    }
+
+    .greeting-body p {
+    margin-bottom: 0.6rem;
+    color: #222222;
     }
 
     .greeting-author {
