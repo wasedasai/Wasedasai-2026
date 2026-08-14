@@ -219,7 +219,7 @@ footer a {
 .sp {
     display: none;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 767px) and (max-width: 1024px) {
 .head-left img {
     overflow: visible !important;
     width: 90vw;
@@ -256,7 +256,7 @@ a {
     width: 100%;
     left: 0;
     top: 25%; /* お好みの高さに合わせてください */
-    padding-left: 70%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
+    padding-left: 60%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start; /* ★ ここを flex-start（左揃え）に戻す */
@@ -278,7 +278,7 @@ a {
     .sns-icons {
         position: absolute;
         left: 7%;
-        bottom: -10%;
+        bottom: 0%;
         margin-top: 0;
     }
 .sns-icons img {
@@ -303,7 +303,7 @@ a {
     display: none;
 }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .head-left img {
     overflow: visible !important;
     width: 90vw;
@@ -344,7 +344,7 @@ a {
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
-    gap: 17px;
+    gap: 14px;
 }
 .flex-box-left,
 .flex-box-right {
@@ -361,7 +361,7 @@ a {
     .sns-icons {
         position: absolute;
         left: 7%;
-        bottom: 10%;
+        bottom: 0;
         margin-top: 0;
         gap: 30px;
     }
