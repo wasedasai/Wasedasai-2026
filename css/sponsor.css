@@ -68,8 +68,23 @@
   font-size: 20px;
 }
 
+.address-flex {
+    display: flex;
+}
+
+.address-label {
+    flex-shrink: 0;
+}
+
+.sp-br {
+    display: none;
+}
 
 @media (max-width: 1024px) {
+  .sp-br {
+        display: block;
+    }
+
   .ad-grid {
     margin-top: 40px;
     grid-template-columns: 1fr; 
