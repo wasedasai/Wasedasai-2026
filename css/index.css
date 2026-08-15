@@ -636,6 +636,8 @@ section * {
 .menu-list a:hover {
     opacity: 0.7;
 }
+
+
 @media (max-width: 1380px) {
     .contact-container {
         gap: 4vw; 
