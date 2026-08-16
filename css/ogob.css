@@ -1,0 +1,385 @@
+.support-title {
+    margin-top: 70px;
+}
+.support-content {
+    display: flex;
+    height: fit-content;
+}
+.support-block {
+    display: flex;
+}
+.support-num {
+    font-size: 50px;
+    font-weight: 300;
+    margin: 0;
+    margin-right: 50px;
+}
+.support-up {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+.support-down {
+    margin: 0;
+    font-size: 20px;
+}
+.support-line {
+    background-color: #222222;
+    height: 77px;
+    width: 2px;
+    margin: 0 90px;
+}
+.support-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content h3 {
+    font-size: 25px;
+    letter-spacing: 0.06em;
+    margin: 0;
+    margin-top: 110px;
+    margin-bottom: 25px;
+    font-weight: normal;
+}
+.border-title {
+    margin: 70px 0 25px 0 !important; 
+}
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #222222;
+}
+.news-item {
+    display: flex;
+    align-items: baseline;
+}
+.news-date {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+}
+.year {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.month {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.period {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.day {
+    font-size: 50px;
+    margin-right: -5px;
+}
+.sunday {
+    font-size: 18px;
+    font-weight: bold;
+    align-self: center;
+    transform-origin: center center;
+    display: inline-block;
+    transform: rotate(90deg) translateX(5px);
+    color: #B02E2D;
+}
+.procedure {
+    margin: 70px 0 20px 0 !important;
+}
+.url {
+    margin-top: 33px !important;
+}
+a {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    line-height: 33px;
+    color: #EF5350;
+    text-decoration: underline;
+    text-decoration-thickness: 6.5%;
+    text-underline-offset: 19%;
+    margin: 0;
+}
+.url-a {
+    margin-left: 8px !important;
+    margin-bottom: 33px !important;
+}
+.content img {
+    display: block;
+}
+.certificate {
+margin-top: 70px !important;
+}
+.inquiry {
+    margin-top: 75px;
+}
+.mail-box {
+    display: flex;
+    margin-top: 7px;
+    margin-bottom: 55px;
+}
+.mail-img {
+    margin-right: 15px;
+    margin-bottom: -2px;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+    .support-title {
+    margin-top: 55px;
+}
+.support-num {
+    font-size: 40px;
+    font-weight: 300;
+    margin: 0;
+    margin-right: 40px;
+}
+.support-up {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+}
+.support-down {
+    margin: 0;
+    font-size: 16px;
+}
+.support-line {
+    background-color: #222222;
+    height: 60px;
+    width: 2px;
+    margin: 0 60px;
+}
+.content h3 {
+    font-size: 20px;
+    letter-spacing: 0.06em;
+    margin: 0;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.border-title {
+    margin: 50px 0 20px 0 !important; 
+}
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #222222;
+}
+.news-item {
+    display: flex;
+    align-items: baseline;
+}
+.news-date {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    letter-spacing: 0.06em;
+}
+.year {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.month {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.period {
+    font-size: 50px;
+    letter-spacing: 0.06em;
+    margin: 2px;
+}
+.day {
+    font-size: 50px;
+    margin-right: -5px;
+}
+.sunday {
+    font-size: 18px;
+    font-weight: bold;
+    align-self: center;
+    transform-origin: center center;
+    display: inline-block;
+    transform: rotate(90deg) translateX(5px);
+    color: #B02E2D;
+}
+.procedure {
+    margin: 50px 0 20px 0 !important;
+}
+.url {
+    margin-top: 20px !important;
+}
+a {
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    line-height: 33px;
+    color: #EF5350;
+    text-decoration: underline;
+    text-decoration-thickness: 6.5%;
+    text-underline-offset: 19%;
+    margin: 0;
+}
+.url-a {
+    margin-left: 8px !important;
+    margin-bottom: 33px !important;
+}
+.content img {
+    display: block;
+}
+.certificate {
+margin-top: 50px !important;
+}
+.inquiry {
+    margin-top: 55px;
+}
+.mail-box {
+    display: flex;
+    margin-top: 7px;
+    margin-bottom: 40px;
+}
+.mail-img {
+    height: 25px;
+    margin-right: 15px;
+    margin-bottom: -4px;
+}
+}
+@media (max-width: 767px) {
+    .support-title {
+    margin-top: 40px;
+}
+.support-content {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+}
+.support-block {
+    display: flex;
+}
+.support-num {
+    font-size: 33px;
+    font-weight: 300;
+    margin: 0;
+    margin-right: 20px;
+}
+.support-up {
+    margin: 0;
+    font-size: 17px;
+    font-weight: 500;
+}
+.support-down {
+    margin: 0;
+    font-size: 14px;
+}
+.support-line {
+    background-color: #222222;
+    height: 1px;
+    width: 227px;
+    margin: 20px 0px;
+}
+.support-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content h3 {
+    font-size: 16px;
+    letter-spacing: 0.06em;
+    margin: 0;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.border-title {
+    margin: 40px 0 15px 0 !important; 
+}
+.news-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.news-item {
+    display: flex;
+    align-items: baseline;
+}
+.news-date {
+    display: flex;
+    align-items: center;
+    line-height: 33px;
+}
+.year {
+    font-size: 34px;
+    letter-spacing: 0.03em;
+    margin: 2px;
+}
+.month {
+    font-size: 34px;
+    letter-spacing: 0.03em;
+    margin: 2px;
+}
+.period {
+    font-size: 30px;
+    letter-spacing: 0.03em;
+    margin: 2px;
+}
+.day {
+    font-size: 34px;
+    margin-right: -5px;
+}
+.sunday {
+    font-size: 12px;
+    font-weight: bold;
+    align-self: center;
+    transform-origin: center center;
+    display: inline-block;
+    transform: rotate(90deg) translateX(3px);
+    color: #B02E2D;
+}
+.procedure {
+    margin: 40px 0 15px 0 !important;
+}
+.url {
+    margin-top: 20px !important;
+}
+a {
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    line-height: 26px;
+    color: #EF5350;
+    text-decoration: underline;
+    text-decoration-thickness: 6.5%;
+    text-underline-offset: 19%;
+    margin: 0;
+}
+.url-a {
+    margin-left: 8px !important;
+    margin-bottom: 33px !important;
+}
+.QR {
+    height: 190px;
+    width: auto;
+}
+.content img {
+    display: block;
+}
+.certificate {
+margin-top: 40px !important;
+}
+.inquiry {
+    margin-top: 45px;
+}
+.mail-box {
+    display: flex;
+    align-items: center;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+.mail-img {
+    height: 18px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+}
+}
