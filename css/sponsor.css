@@ -47,18 +47,68 @@
   border-bottom: none;
 }
 
-.ad-num {
-  font-size: 45px;
-  color: #222222;
-  line-height: 1;
-  flex-shrink: 0;
+/* .item1{
+  color: #EF5350;
 }
 
+.item2{
+  color: #FF9169;
+}
+
+.item3{
+  color: #ADD1ED;
+} */
+
+.item1 {
+  /* color: #EF5350; */
+  border-bottom-color: #EF5350; /* 下線の色を変更 */
+}
+.item1:nth-child(odd)::after {
+  background-color: #EF5350; /* 右側の縦線の色を変更 */
+}
+
+/* --- item2 の線の色 --- */
+.item2 {
+  /* color: #FF9169; */
+  border-bottom-color: #FF9169;
+}
+.item2:nth-child(odd)::after {
+  background-color: #FF9169;
+}
+
+/* --- item3 の線の色 --- */
+.item3 {
+  /* color: #ADD1ED; */
+  border-bottom-color: #ADD1ED;
+}
+.item3:nth-child(odd)::after {
+  background-color: #ADD1ED;
+}
+.ad-num {
+  font-size: 45px;
+  /* color: #222222; */
+  line-height: 1;
+  flex-shrink: 0;
+  font-weight: 500;
+}
+
+.num1{
+  color: #EF5350;
+}
+
+.num2{
+  color: #FF9169;
+}
+
+.num3{
+  color: #ADD1ED;
+}
 .ad-content {
   flex-grow: 1;
 }
 
 .ad-title {
+  color: #222222;
   font-size: 25px;
   font-weight: 300;
   margin: 0 0 12px 0;
@@ -97,12 +147,12 @@
     column-gap: 15px;
     row-gap: 10px;
     align-items: flex-end; 
-    border-bottom: 1.5px solid #222222;
+    /* border-bottom: 1px solid #222222; */
     padding-bottom: 25px;
   }
 
   .ad-item:nth-last-child(2):nth-child(odd) {
-    border-bottom: 1.5px solid #222222;
+    /* border-bottom: 1px solid #222222; */
   }
   .ad-item:last-child {
     border-bottom: none;
@@ -110,6 +160,32 @@
   .ad-item:nth-child(odd)::after {
     display: none;
   }
+
+  .item1 {
+  /* color: #EF5350; */
+  border-bottom-color: #EF5350; /* 下線の色を変更 */
+}
+.item1:nth-child(odd)::after {
+  background-color: #EF5350; /* 右側の縦線の色を変更 */
+}
+
+/* --- item2 の線の色 --- */
+.item2 {
+  /* color: #FF9169; */
+  border-bottom-color: #FF9169;
+}
+.item2:nth-child(odd)::after {
+  background-color: #FF9169;
+}
+
+/* --- item3 の線の色 --- */
+.item3 {
+  /* color: #ADD1ED; */
+  border-bottom-color: #ADD1ED;
+}
+.item3:nth-child(odd)::after {
+  background-color: #ADD1ED;
+}
 
   .ad-content {
     display: contents; 
