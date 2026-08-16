@@ -212,7 +212,9 @@ footer a {
     letter-spacing: 0.1em;
     transition: opacity 0.3s ease;
 }
-
+.p-space {
+    height: 33px;
+}
 .menu-list a:hover {
     opacity: 0.7;
 }
@@ -245,6 +247,9 @@ footer a {
     letter-spacing: 0.03em;
     line-height: 26px;
 }
+.p-space {
+    height: 18px;
+}
 a {
     font-size: 16px;
     letter-spacing: 0.03em;
@@ -252,11 +257,14 @@ a {
     text-decoration-thickness: 6.5%;
     text-underline-offset: 19%;
 }
+.p-space {
+    height: 20px;
+}
 .flex-box {
     width: 100%;
     left: 0;
     top: 25%; /* お好みの高さに合わせてください */
-    padding-left: 60%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
+    padding-left: 55%; /* ★ 左側に50%の余白を作り、文字全体を右に押し出す */
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start; /* ★ ここを flex-start（左揃え）に戻す */
@@ -277,7 +285,7 @@ a {
     .flex-box-right > a:nth-of-type(2) { order: 4; }
     .sns-icons {
         position: absolute;
-        left: 7%;
+        left: 17%;
         bottom: 0%;
         margin-top: 0;
     }
@@ -340,11 +348,11 @@ a {
     width: 100%;
     left: 0;
     top: 25%;
-    padding-left: 60%;
+    padding-left: 55%;
     box-sizing: border-box;
     flex-direction: column;
     align-items: flex-start;
-    gap: 14px;
+    gap: 12px;
 }
 .flex-box-left,
 .flex-box-right {
@@ -360,10 +368,10 @@ a {
     .flex-box-right > a:nth-of-type(2) { order: 4; }
     .sns-icons {
         position: absolute;
-        left: 7%;
+        left: 14%;
         bottom: 0;
         margin-top: 0;
-        gap: 30px;
+        gap: 25px;
     }
 .sns-icons img {
     height: 20px;
@@ -416,7 +424,9 @@ a {
     .menu-list a {
         font-size: 16px;     
     }
-
+    .p-space {
+    height: 18px;
+}
 .sp {
     display: block;
 }
