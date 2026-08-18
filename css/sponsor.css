@@ -1,3 +1,14 @@
+::selection {
+    background-color: #EF5350;
+    color: #FBFBFB;            
+}
+
+
+::-moz-selection {
+    background-color: #EF5350;
+    color: #FBFBFB;
+}
+
 .section-title{
   margin-top: 80px;
 }

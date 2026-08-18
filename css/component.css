@@ -5,6 +5,18 @@ body {
     overflow-x: hidden;
     font-family: "Zen Kaku Gothic New", sans-serif;
 }
+
+::selection {
+    background-color: #EF5350;
+    color: #FBFBFB;            
+}
+
+
+::-moz-selection {
+    background-color: #EF5350;
+    color: #FBFBFB;
+}
+
 .head-left img {
     overflow: visible !important;
     width: 53vw;

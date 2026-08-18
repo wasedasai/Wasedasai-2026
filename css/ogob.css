@@ -1,3 +1,13 @@
+::selection {
+    background-color: #EF5350;
+    color: #FBFBFB;            
+}
+
+
+::-moz-selection {
+    background-color: #EF5350;
+    color: #FBFBFB;
+}
 .support-title {
     margin-top: 70px;
 }
