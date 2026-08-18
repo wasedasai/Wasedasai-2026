@@ -475,11 +475,25 @@ section * {
     height: auto;
     pointer-events: auto !important; 
     cursor: pointer;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+.blob-top {
+    top: 25%;
+    right: -20px;
+    width: 18%; 
+    animation-name: float-top;
+    animation-duration: 5s; 
+    animation-delay: -3s;
 }
 
 .blob-left {
     top: 68%;
     width: 20%;  
+    animation-name: float-left;
+    animation-duration: 7s; 
+    animation-delay: -5s;
 }
 
 .blob-right {
@@ -487,12 +501,54 @@ section * {
     right: -10%;
     width: 50%;
     max-width: 600px;
+    animation-name: float-right;
+    animation-duration: 9s; 
+    animation-delay: -1s;
 }
 
-.blob-top {
-    top: 25%;
-    right: -20px;
-    width: 18%; 
+@keyframes float-top {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    33% {
+        transform: translate(10px, 15px); 
+    }
+    66% {
+        transform: translate(-5px, -5px); 
+    }
+}
+@keyframes float-left {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-10px, 5px); 
+    }
+    50% {
+        transform: translate(0px, 15px);  
+    }
+    75% {
+        transform: translate(10px, 0px);  
+    }
+}
+
+/* rightの図形用の動き */
+@keyframes float-right {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    20% {
+        transform: translate(10px, -10px);
+    }
+    40% {
+        transform: translate(0px, 10px);   
+    }
+    60% {
+        transform: translate(-10px, -5px); 
+    }
+    80% {
+        transform: translate(5px, 10px);
+    }
 }
 
 .sp-br {
