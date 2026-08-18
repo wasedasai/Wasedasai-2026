@@ -45,10 +45,17 @@ body {
     margin-bottom: 35px;
 }
 .under-line {
-    margin-top: 2px;
-    height: 1.5px;
-    width: auto;
-    background-color: #EF5350;
+  margin-top: 2px;
+  height: 1.5px;
+  width: 100%;
+  background-color: #EF5350;
+  transform-origin: left center;
+  transform: scaleX(0); 
+  transition: transform 0.6s ease-out;
+}
+
+.under-line.is-active {
+  transform: scaleX(1);
 }
 .content p {
     font-size: 20px;
