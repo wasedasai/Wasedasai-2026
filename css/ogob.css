@@ -30,6 +30,10 @@
     margin: 0;
     font-size: 20px;
 }
+.QR {
+    height: 300px;
+    width: 300px;
+}
 .support-line {
     background-color: #FF9169 !important;
     height: 77px;
