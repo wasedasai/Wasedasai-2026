@@ -157,6 +157,7 @@ section * {
     width: 12%; 
 }
 
+
 .decor-tr {
     top: 0;
     right: 0;
@@ -738,6 +739,9 @@ section * {
         padding: 0 50px;
         margin-top: 80px;
         margin-bottom: 50px;
+    }
+    section:first-of-type {
+        margin-top: 20px; 
     }
 
     .section-title {

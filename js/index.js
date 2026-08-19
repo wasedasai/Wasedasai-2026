@@ -25,8 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentProgress = 0;
     let isLocked = true;
 
-    // 進行度の上限（100〜160 が余白スクロール）
-    const MAX_PROGRESS = 160; 
+    // 進行度の上限（図形が出きったらすぐにスクロール解除するよう100に設定）
+    const MAX_PROGRESS = 100; 
 
     document.body.classList.add('no-scroll');
 
@@ -76,7 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (isLocked) {
             if (e.cancelable) e.preventDefault();
 
-            targetProgress += deltaY * 0.15;
+            // 感度を 0.15 → 0.35 に変更してスマホの操作感を軽やかに調整
+            targetProgress += deltaY * 0.35;
             targetProgress = Math.max(0, Math.min(MAX_PROGRESS, targetProgress));
 
             if (targetProgress >= MAX_PROGRESS && deltaY > 0) {
